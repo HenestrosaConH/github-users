@@ -1,0 +1,68 @@
+/* 
+  Localizable.strings
+  GitHubUsers
+
+  Created by JC on 29/7/22.
+  
+*/
+
+// MARK: - Generic
+
+// MARK: Error
+"title_generic_error" = "Something went wrong";
+
+// MARK: Nouns
+"favorites" = "Favorites";
+"followers" = "Followers";
+"following" = "Following";
+"repos" = "Repositories";
+
+// MARK: Verbs
+"search" = "Search";
+
+
+// MARK: - Network errors
+
+// MARK: Titles
+"title_no_followers" = "No followers";
+"title_no_followings" = "No followings";
+
+// MARK: Descriptions
+"description_generic_network_error" = "Unable to complete your request. Please check your Internet connection.";
+"description_invalid_response" = "Invalid response from the server. Please try again.";
+"description_invalid_data" = "The data received from the server was invalid. Please try again.";
+"description_unauthorized" = "This resource cannot be accessed.";
+"description_unexpected_status_code" = "Unexpected error when executing the network call.";
+"description_no_response" = "No response retrieved from the server. Please try again.";
+"description_no_followers" = "This user has no followers.";
+"description_no_followings" = "This user doesn't follow anyone.";
+
+
+// MARK: - Persistence errors
+
+// MARK: Descriptions
+"description_unable_to_favorite" = "There was an error favoriting this user. Please try again.";
+"description_unable_to_remove" = "There was an error removing this user from favourites. Please try again.";
+"description_unable_to_get_favorites" = "There was an error getting the favorite users. Please try again.";
+
+
+// MARK: - FavoritesListViewController
+"FavoritesListViewController.empty_state" = "No favorites?\nSearch for a user and add it!";
+
+
+// MARK: - UserInfoViewController
+"UserInfoViewController.github_profile" = "GitHub profile";
+"UserInfoViewController.github_user_since" = "GitHub user since";
+
+
+// MARK: - UsersListViewController
+"UsersListViewController.search_placeholder" = "Search for a username";
+"UsersListViewController.empty_state_follwers" = "This user has no followers";
+"UsersListViewController.empty_state_following" = "This user does not follow anyone";
+
+
+// MARK: - SearchViewController
+"SearchViewController.placeholder" = "Enter a username";
+"SearchViewController.get_user" = "Get user";
+"SearchViewController.title_empty_username" = "Empty username";
+"SearchViewController.description_empty_username" = "Please enter a username.";

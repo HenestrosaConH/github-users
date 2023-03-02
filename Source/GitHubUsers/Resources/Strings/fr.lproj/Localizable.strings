@@ -1,0 +1,66 @@
+/* 
+  Localizable.strings
+  GitHubUsers
+
+  Created by JC on 29/7/22.
+  
+*/
+
+// MARK: - Generic
+
+// MARK: Error
+"title_generic_error" = "Il y a eu un problème";
+
+// MARK: Nouns
+"favorites" = "Favoris";
+"followers" = "Suiveurs";
+"following" = "Suivis";
+"repos" = "Repositories";
+
+// MARK: Verbs
+"search" = "Chercher";
+
+
+// MARK: - Network errors
+
+// MARK: Titles
+"title_no_followers" = "Pas de suiveurs";
+"title_no_followings" = "Pas de suivis";
+
+// MARK: Descriptions
+"description_generic_network_error" = "Impossible de compléter votre demande. Veuillez vérifier votre connexion Internet.";
+"description_invalid_response" = "Réponse invalide du serveur. Veuillez réessayer.";
+"description_invalid_data" = "Les données reçues du serveur n'étaient pas valides. Veuillez réessayer.";
+"description_unauthorized" = "Cette ressource n'est pas accessible.";
+"description_unexpected_status_code" = "Erreur inattendue lors de l'exécution de l'appel réseau.";
+"description_no_response" = "Aucune réponse n'a été récupérée sur le serveur. Veuillez réessayer.";
+"description_no_followers" = "Cet utilisateur n'a pas de followers.";
+"description_no_followings" = "Cet utilisateur ne suit personne.";
+
+
+// MARK: - Persistence errors
+
+// MARK: Descriptions
+"description_unable_to_favorite" = "Il y a eu une erreur en favorisant cet utilisateur. Veuillez réessayer.";
+"description_unable_to_remove" = "Une erreur s'est produite lors de la suppression de cet utilisateur des favoris. Veuillez réessayer.";
+"description_unable_to_get_favorites" = "Les utilisateurs préférés n'ont pas pu être obtenus. Veuillez réessayer.";
+
+
+// MARK: - FavoritesListViewController
+"FavoritesListViewController.empty_state" = "Aucun favori ?\nRecherchez un utilisateur et ajoutez-le !";
+
+
+// MARK: - UserInfoViewController
+"UserInfoViewController.github_profile" = "Profil de GitHub";
+"UserInfoViewController.github_user_since" = "Utilisateur de GitHub depuis";
+
+
+// MARK: - UsersListViewController
+"UsersListViewController.search_placeholder" = "Filtrer par nom…";
+
+
+// MARK: - SearchViewController
+"SearchViewController.placeholder" = "Entrez un nom d'utilisateur";
+"SearchViewController.get_user" = "Obtenir l'utilisateur";
+"SearchViewController.title_empty_username" = "Nom d'utilisateur vide";
+"SearchViewController.description_empty_username" = "S'il vous plaît, entrez un nom d'utilisateur.";

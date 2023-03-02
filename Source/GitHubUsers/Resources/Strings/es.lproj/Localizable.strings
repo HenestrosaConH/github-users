@@ -1,0 +1,66 @@
+/*
+  Localizable.strings
+  GitHubUsers
+
+  Created by JC on 29/7/22.
+  
+*/
+
+// MARK: - Generic
+
+// MARK: Errors
+"title_generic_error" = "Algo fue mal";
+
+// MARK: Nouns
+"favorites" = "Favoritos";
+"followers" = "Seguidores";
+"following" = "Seguidos";
+"repos" = "Repositorios";
+
+// MARK: Verbs
+"search" = "Buscar";
+
+
+// MARK: - Network errors
+
+// MARK: Titles
+"title_no_followers" = "No hay seguidores";
+"title_no_followings" = "No hay seguidos";
+
+// MARK: Descriptions
+"description_generic_network_error" = "No se ha podido completar tu acción. Por favor, revisa tu conexión de Internet.";
+"description_invalid_response" = "Respuesta inválida del servidor. Por favor, inténtalo de nuevo.";
+"description_invalid_data" = "Los datos obtenidos no son válidos. Por favor, inténtalo de nuevo.";
+"description_unauthorized" = "No se puede acceder a este recurso.";
+"description_unexpected_status_code" = "Error inesperado al ejecutar la acción.";
+"description_no_response" = "No hay respuesta del servidor. Por favor, inténtalo de nuevo.";
+"description_no_followers" = "Este usuario no tiene seguidores.";
+"description_no_followings" = "Este usuario no sigue a nadie.";
+
+
+// MARK: - Persistence errors
+
+// MARK: Descriptions
+"description_unable_to_favorite" = "No se ha podido añadir el usuario a favoritos. Por favor, inténtalo de nuevo.";
+"description_unable_to_remove" = "No se ha podido eliminar al usuario de favoritos. Por favor, inténtalo de nuevo.";
+"description_unable_to_get_favorites" = "No se han podido obtener los usuarios favoritos. Por favor, inténtalo de nuevo.";
+
+
+// MARK: - FavoritesListViewController
+"FavoritesListViewController.empty_state" = "¿Aún no tienes favoritos?\n¡Busca a un usuario y añádelo!";
+
+
+// MARK: - UserInfoViewController
+"UserInfoViewController.github_profile" = "Perfil de GitHub";
+"UserInfoViewController.github_user_since" = "Usuario de GitHub desde";
+
+
+// MARK: - UsersListViewController
+"UsersListViewController.search_placeholder" = "Filtrar por nombre…";
+
+
+// MARK: - SearchViewController
+"SearchViewController.placeholder" = "Introduce usuario";
+"SearchViewController.get_user" = "Obtener usuario";
+"SearchViewController.title_empty_username" = "Nombre de usuario vacío";
+"SearchViewController.description_empty_username" = "Introduce un nombre de usuario.";
