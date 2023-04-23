@@ -2,14 +2,14 @@
 //  GFTitleLabel.swift
 //  GitHubUsers
 //
-//  Created by JC on 27/6/22.
+//  Created by HenestrosaConH on 27/6/22.
 //
 
 import UIKit
 
 class GFTitleLabel: UILabel {
 
-    // MARK: - Initializers
+    // MARK: Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +25,6 @@ class GFTitleLabel: UILabel {
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
     }
-    
     
     // MARK: - Private Methods
     

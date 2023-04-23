@@ -2,14 +2,14 @@
 //  GFSecondaryTitleLabel.swift
 //  GitHubUsers
 //
-//  Created by JC on 3/7/22.
+//  Created by HenestrosaConH on 3/7/22.
 //
 
 import UIKit
 
 class GFSecondaryTitleLabel: UILabel {
 
-    // MARK: - Initializers
+    // MARK: Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +24,6 @@ class GFSecondaryTitleLabel: UILabel {
         self.init(frame: .zero)
         font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
     }
-    
     
     // MARK: - Private Methods
     

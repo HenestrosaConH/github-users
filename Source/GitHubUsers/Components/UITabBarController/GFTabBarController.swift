@@ -2,7 +2,7 @@
 //  GFTabBarController.swift
 //  GitHubUsers
 //
-//  Created by JC on 11/7/22.
+//  Created by HenestrosaConH on 11/7/22.
 //
 
 import UIKit
@@ -16,16 +16,15 @@ class GFTabBarController: UITabBarController {
         configureTabBar()
     }
     
-    
     // MARK: - Private Methods
     
     /**
-     * Sets up the bottom tab bar controller with two navigation controllers
-     * holding a view controller each.
+     Sets up the bottom tab bar controller with two navigation controllers
+     holding a view controller each.
      */
     private func configureTabBar() {
         UITabBar.appearance().tintColor = .systemGreen
-        viewControllers = [createSearchNC(), createFavoritesListNC()]
+        viewControllers = [createSearchNC(), createFavoriteListNC()]
         
         if #available(iOS 15, *) {
             let appearance = UITabBarAppearance()
@@ -37,18 +36,18 @@ class GFTabBarController: UITabBarController {
     
     private func createSearchNC() -> UINavigationController {
         let searchVC = SearchViewController()
-        searchVC.title = "search".localized()
+        searchVC.title = "action_search".localized()
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
         return UINavigationController(rootViewController: searchVC)
     }
     
-    private func createFavoritesListNC() -> UINavigationController {
-        let favoritesListVC = FavoritesListViewController()
-        favoritesListVC.title = "favorites".localized()
-        favoritesListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+    private func createFavoriteListNC() -> UINavigationController {
+        let favoriteListVC = FavoriteListViewController(favoriteRepository: FavoriteRepository())
+        favoriteListVC.title = "favorites".localized()
+        favoriteListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         
-        return UINavigationController(rootViewController: favoritesListVC)
+        return UINavigationController(rootViewController: favoriteListVC)
     }
     
 }

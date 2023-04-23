@@ -80,7 +80,9 @@ The app connects to the GitHub API in order to access these endpoints:
 
 There might be some more subtle differences between the base project and my project, but these are the main ones:
 - Edited icons to change "Followers" to "Users" in order to match the new project's name.
-- Project converted to the MVVM architectural pattern in order to separate concerns between the user interface and the business logic of the application.
+- Moved `GFCard` group to `Components/UIView` because it didn't make any sense that the cards were UIViewControllers instead of UIViews.
+- Renamed `ItemsInfoVCs` to `GFCardItem` to be more descriptive. 
+- Made the necessary changes to convert the project into a pure MVC project in order to conform to SOLID principles because the base project mixed user interface's concerns with the business logic of the application.
 - Restructuring of the project's root groups.
 - Added `MARK` to files in order to improve their organisation.
 - Added `ScopeButtonsOption` to `searchController.searchBar` in `UsersList` in order to add the option to show the users that the searched user is following.

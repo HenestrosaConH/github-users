@@ -2,7 +2,7 @@
 //  Date+Ext.swift
 //  GitHubUsers
 //
-//  Created by JC on 3/7/22.
+//  Created by HenestrosaConH on 3/7/22.
 //
 import Foundation
 

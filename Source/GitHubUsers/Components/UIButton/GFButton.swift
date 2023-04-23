@@ -2,24 +2,22 @@
 //  GFButton.swift
 //  GitHubUsers
 //
-//  Created by JC on 26/6/22.
+//  Created by HenestrosaConH on 26/6/22.
 //
 
 import UIKit
 
 class GFButton: UIButton {
 
-    // MARK: - Initializers
+    // MARK: Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
     
-    /*
-     Won't get executed because this initialiser will be called if an
-     instance of the view is used in a storyboard scene.
-     */
+    // Won't get executed because this initialiser will be called if an
+    // instance of the view is used in a storyboard scene.
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -29,7 +27,6 @@ class GFButton: UIButton {
         set(color: color, title: title, image: image)
     }
         
-    
     // MARK: - Public Methods
     
     func set(color: UIColor, title: String, image: UIImage) {
@@ -42,8 +39,7 @@ class GFButton: UIButton {
         configuration?.imagePlacement = .leading
     }
     
-    
-    // MARK: - Private Methods
+    // MARK: Private Methods
     
     private func configure() {
         configuration = .filled()

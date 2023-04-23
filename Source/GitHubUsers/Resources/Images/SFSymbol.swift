@@ -2,7 +2,7 @@
 //  SFSymbol.swift
 //  GitHubUsers
 //
-//  Created by JC on 19/7/22.
+//  Created by HenestrosaConH on 19/7/22.
 //
 
 import UIKit

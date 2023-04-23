@@ -2,24 +2,22 @@
 //  GFTextField.swift
 //  GitHubUsers
 //
-//  Created by JC on 26/6/22.
+//  Created by HenestrosaConH on 26/6/22.
 //
 
 import UIKit
 
 class GFTextField: UITextField {
 
-    // MARK: - Initializers
+    // MARK: Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
     
-    /**
-     * Won't get called because this initialiser only gets executed if an
-     * instance of the view is used in a storyboard scene.
-     */
+    // Won't get called because this initialiser only gets executed if an
+    // instance of the view is used in a storyboard scene.
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -54,10 +52,8 @@ class GFTextField: UITextField {
         // shows an "X" at the end of the TextField to allow the user to remove the content
         clearButtonMode = .always
         
-        /**
-         * If set to true, the system automatically creates a set of constraints based on
-         * the view’s frame and its autoresizing mask.
-         */
+        // If set to true, the system automatically creates a set of constraints based on
+        // the view’s frame and its autoresizing mask.
         translatesAutoresizingMaskIntoConstraints = false
     }
 

@@ -2,7 +2,7 @@
 //  String+Ext.swift
 //  GitHubUsers
 //
-//  Created by JC on 29/7/22.
+//  Created by HenestrosaConH on 29/7/22.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  GFEmptyState.swift
 //  GitHubUsers
 //
-//  Created by JC on 30/6/22.
+//  Created by HenestrosaConH on 30/6/22.
 //
 
 import UIKit
@@ -13,7 +13,6 @@ class GFEmptyStateView: UIView {
     
     private let messageLb = GFTitleLabel(textAlignment: .center, fontSize: 28)
     private let logoIv = UIImageView()
-    
     
     // MARK: - Initializers
     
@@ -33,7 +32,6 @@ class GFEmptyStateView: UIView {
         self.init(frame: .zero)
         messageLb.text = message
     }
-    
     
     // MARK: - Private Methods
     

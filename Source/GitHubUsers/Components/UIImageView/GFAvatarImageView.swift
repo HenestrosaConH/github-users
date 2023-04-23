@@ -2,7 +2,7 @@
 //  GFAvatarImageView.swift
 //  GitHubUsers
 //
-//  Created by JC on 29/6/22.
+//  Created by HenestrosaConH on 29/6/22.
 //
 
 import UIKit
@@ -19,7 +19,6 @@ class GFAvatarImageView: UIImageView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     // MARK: - Private Methods
     

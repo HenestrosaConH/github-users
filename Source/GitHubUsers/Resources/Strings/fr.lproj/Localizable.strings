@@ -2,7 +2,7 @@
   Localizable.strings
   GitHubUsers
 
-  Created by JC on 29/7/22.
+  Created by HenestrosaConH on 29/7/22.
   
 */
 
@@ -18,7 +18,7 @@
 "repos" = "Repositories";
 
 // MARK: Verbs
-"search" = "Chercher";
+"action_search" = "Chercher";
 
 
 // MARK: - Network errors
@@ -46,21 +46,23 @@
 "description_unable_to_get_favorites" = "Les utilisateurs préférés n'ont pas pu être obtenus. Veuillez réessayer.";
 
 
-// MARK: - FavoritesListViewController
-"FavoritesListViewController.empty_state" = "Aucun favori ?\nRecherchez un utilisateur et ajoutez-le !";
+// MARK: - FavoriteList
+"FavoriteList.empty_state" = "Aucun favori ?\nRecherchez un utilisateur et ajoutez-le !";
 
 
-// MARK: - UserInfoViewController
-"UserInfoViewController.github_profile" = "Profil de GitHub";
-"UserInfoViewController.github_user_since" = "Utilisateur de GitHub depuis";
+// MARK: - UserInfo
+"UserInfo.github_profile" = "Profil de GitHub";
+"UserInfo.github_user_since" = "Utilisateur de GitHub depuis";
 
 
-// MARK: - UsersListViewController
-"UsersListViewController.search_placeholder" = "Filtrer par nom…";
+// MARK: - UserList
+"UserList.search_placeholder" = "Filtrer par nom…";
+"UserList.empty_state_followers" = "Cet utilisateur n'a pas de followers";
+"UserList.empty_state_following" = "Cet utilisateur ne suit personne";
 
 
-// MARK: - SearchViewController
-"SearchViewController.placeholder" = "Entrez un nom d'utilisateur";
-"SearchViewController.get_user" = "Obtenir l'utilisateur";
-"SearchViewController.title_empty_username" = "Nom d'utilisateur vide";
-"SearchViewController.description_empty_username" = "S'il vous plaît, entrez un nom d'utilisateur.";
+// MARK: - Search
+"Search.placeholder" = "Entrez un nom d'utilisateur";
+"Search.get_user" = "Obtenir l'utilisateur";
+"Search.title_empty_username" = "Nom d'utilisateur vide";
+"Search.description_empty_username" = "S'il vous plaît, entrez un nom d'utilisateur.";

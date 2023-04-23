@@ -2,7 +2,7 @@
 //  UIVIewController+Ext.swift
 //  GitHubUsers
 //
-//  Created by JC on 27/6/22.
+//  Created by HenestrosaConH on 27/6/22.
 //
 
 import UIKit
@@ -12,11 +12,9 @@ fileprivate var loadingView: UIView!
 
 extension UIViewController {
     
-    /**
-     Displays the GFAlertVC from any UIViewController class
-     */
+    /// Displays the GFAlertViewController from any UIViewController class
     func presentGFAlert(title: String, message: String, buttonTitle: String = "OK") {
-        let alertVC = GFAlertVC(title: title, message: message, buttonTitle: buttonTitle)
+        let alertVC = GFAlertViewController(title: title, message: message, buttonTitle: buttonTitle)
         alertVC.modalPresentationStyle = .overFullScreen
         alertVC.modalTransitionStyle = .crossDissolve // presentation animation
         self.present(alertVC, animated: true)
@@ -28,9 +26,7 @@ extension UIViewController {
         self.present(safariVC, animated: true)
     }
     
-    /**
-     Shows a loading view while retrieving data from the network
-     */
+    /// Shows a loading view while retrieving data from the network
     func showLoadingView() {
         loadingView = UIView(frame: view.bounds)
         view.addSubview(loadingView)
@@ -64,21 +60,6 @@ extension UIViewController {
                 loadingView?.removeFromSuperview()
                 loadingView = nil
             })
-        }
-    }
-    
-    func showEmptyStateView(with message: String, in view: UIView) {
-        let emptyStateView = GFEmptyStateView(message: message)
-        emptyStateView.frame = view.bounds
-        view.addSubview(emptyStateView)
-    }
-    
-    func hideEmptyStateView(from view: UIView) {
-        for subview in view.subviews {
-            if let emptyStateView = subview as? GFEmptyStateView {
-                emptyStateView.removeFromSuperview()
-                break
-            }
         }
     }
     

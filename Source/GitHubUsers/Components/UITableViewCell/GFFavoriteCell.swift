@@ -2,21 +2,23 @@
 //  GFFavoriteCell.swift
 //  GitHubUsers
 //
-//  Created by JC on 5/7/22.
+//  Created by HenestrosaConH on 5/7/22.
 //
 
 import UIKit
 
 class GFFavoriteCell: UITableViewCell {
     
-    // MARK: - Private Properties
+    // MARK: - Public Properties
+    
+    static let reuseId = "FollowerCell"
+    
+    // MARK: Private Properties
+    
     private let avatarIv = GFAvatarImageView()
     private let usernameLb = GFTitleLabel(textAlignment: .left, fontSize: 26)
     
     private let padding: CGFloat = 12
-    
-    // MARK: - Static Properties
-    static let reuseId = "FollowerCell"
     
     // MARK: - Initializers
     
@@ -33,7 +35,6 @@ class GFFavoriteCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     // MARK: - Public Methods
     
     func set(favorite: User) {
@@ -41,8 +42,7 @@ class GFFavoriteCell: UITableViewCell {
         usernameLb.text = favorite.username
     }
     
-    
-    // MARK: - Private Methods
+    // MARK: Private Methods
     
     private func configureAvatarIv() {
         addSubview(avatarIv)

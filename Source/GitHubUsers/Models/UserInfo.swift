@@ -2,12 +2,13 @@
 //  UserInfo.swift
 //  GitHubUsers
 //
-//  Created by JC on 27/6/22.
+//  Created by HenestrosaConH on 27/6/22.
 //
 
 import UIKit
 
 struct UserInfo: Userable, Codable {
+    
     // MARK: In JSON response
     var username: String
     var avatarUrl: URL

@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  GitHubUsers
 //
-//  Created by JC on 21/6/22.
+//  Created by HenestrosaConH on 21/6/22.
 //
 
 import UIKit

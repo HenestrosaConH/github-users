@@ -2,7 +2,7 @@
 //  Cache.swift
 //  GitHubUsers
 //
-//  Created by JC on 23/7/22.
+//  Created by HenestrosaConH on 23/7/22.
 //
 //  Taken from https://www.swiftbysundell.com/articles/caching-in-swift/
 

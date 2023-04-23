@@ -2,14 +2,14 @@
 //  GFBodyLabel.swift
 //  GitHubUsers
 //
-//  Created by JC on 27/6/22.
+//  Created by HenestrosaConH on 27/6/22.
 //
 
 import UIKit
 
 class GFBodyLabel: UILabel {
 
-    // MARK: - Initializers
+    // MARK: Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +24,6 @@ class GFBodyLabel: UILabel {
         self.init(frame: .zero)
         self.textAlignment = textAlignment
     }
-    
     
     // MARK: - Private Methods
     
