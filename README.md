@@ -41,7 +41,7 @@
 
 ## Table of Contents
 
-- [About Tte Project](#about-the-project)
+- [About the Project](#about-the-project)
     - [Screen](#screens)
     - [List of Changes](#list-of-changes)
     - [Project Structure](#project-structure)
@@ -70,20 +70,20 @@ add other users to favorites, so they don't have to type them every time. This n
 The app is made without 3rd party libraries and the UI is 100% programmatic (no `.xib` files nor Storyboards).
 
 The app connects to the GitHub API in order to access these endpoints:
-- Followers endpoint - https://developer.github.com/v3/users/<username>/followers
-- Following endpoint - https://developer.github.com/v3/users/<username>/following
-- User endpoint - https://developer.github.com/v3/users/<username>
+- Followers endpoint - https://developer.github.com/v3/users/USERNAME/followers
+- Following endpoint - https://developer.github.com/v3/users/USERNAME/following
+- User endpoint - https://developer.github.com/v3/users/USERNAME
 
 <!-- LIST OF CHANGES -->
 
 ### List of Changes
 
 There might be some more subtle differences between the base project and my project, but these are the main ones:
-- Edited icons to change "Followers" to "Users" in order to match the new project's name.
+- Edited icons to change "Followers" to "Users" in order to match the new project name.
 - Moved `GFCard` group to `Components/UIView` because it didn't make any sense that the cards were UIViewControllers instead of UIViews.
 - Renamed `ItemsInfoVCs` to `GFCardItem` to be more descriptive. 
 - Made the necessary changes to convert the project into a pure MVC project in order to conform to SOLID principles because the base project mixed user interface's concerns with the business logic of the application.
-- Restructuring of the project's root groups.
+- Restructuring of the project root groups.
 - Added `MARK` to files in order to improve their organisation.
 - Added `ScopeButtonsOption` to `searchController.searchBar` in `UsersList` in order to add the option to show the users that the searched user is following.
 - Added `KeyboardDismissible` protocol in order to hide the keyboard when the user taps outside a focused textfield.
@@ -97,72 +97,127 @@ There might be some more subtle differences between the base project and my proj
 - Added user info icon to `UsersList` navigation bar. Now you can access the searched user info directly from that screen, which was not possible in the base project. 
 - Refactored and improved the **network layer**. For this, a `Network` group has been added, which abstracts all networking operations.
 - Added version label to `Search` screen containing the version and build number of the project.
-- Improved the way to get more users when scrolling to the end of the `UICollectionView` from `UsersListVC`. Now it's done with `collectionView willDisplay` instead of `scrollViewDidEndDragging` because it felt wonky. 
+- Improved the way to get more users when scrolling to the end of the `UICollectionView` from `UsersListVC`. Now it's done with `collectionView willDisplay` instead of `scrollViewDidEndDragging` because it felt wonky.
+- All ViewControllers have been broken down into more files and classes to follow the separation of concerns principle.   
 
 <!-- PROJECT STRUCTURE -->
 
 ### Project Structure
 
-```
-github-users/
-├─ .github/                             <-- Contains templates for the GitHub repository.
-│  ├─ ISSUE_TEMPLATE/
-│  │   ├─ bug_report_template.md
-│  │   ├─ feature_request_template.md
-│  ├─ PULL_REQUEST_TEMPLATE/
-│  │   ├─ pull_request_template.md      
-│  ├─ CONTRIBUTING.md                   <-- Guidelines to follow if you want to contribute to the project.
-├─ Docs/                                <-- Contains files related to the documentation of the project.
-│  ├─ Gifs/                             <-- .gif files showing the app functionality.
-│  ├─ Images/
-│  │  ├─ Screenshots/                   
-│  │  │  ├─ Dark/                       <-- Contains screenshots of the application in dark mode.
-│  │  │  │  ├─ Raw/                     <-- Contains all .png files taken from the simulator in order to template and collage them.
-│  │  │  │  │  ├─ *.png
-│  │  │  │  ├─ Template/                <-- Collage raw images templated.
-│  │  │  │  │  ├─ *.png
-│  │  │  │  │  ├─ collage.png           <-- Collage with all .png files templated showing the main features.
-│  │  │  ├─ Light/                      <-- Contains screenshots of the application in light mode.
-│  │  │  │  ├─ Raw/                     <-- Contains all .png files taken from the simulator in order to template and collage them.
-│  │  │  │  │  ├─ *.png                 
-│  │  │  │  ├─ Template/                <-- Collage raw images templated.
-│  │  │  │  │  ├─ *.png
-│  │  │  │  │  ├─ collage.png           <-- Collage with all .png files templated showing the main features.
-│  │  ├─ hero.png                       <-- Repository's social media preview.
-│  │  ├─ icon.png                       <-- Project icon.
-├─ Source/                              <-- Contains the source code files.
-│  ├─ GitHubUsers/
-│  │  ├─ Base.lproj/                    <-- Contains localized resources for the default (base) language of the app.
-│  │  ├─ Components/                    <-- Contains reusable visual components to use throughout the app.
-│  │  │  ├─ */ 
-│  │  ├─ Extensions/                    <-- Contains code files that provide additional functionality to existing classes, structs or protocols without the need to subclass or modify them directly.
-│  │  │  ├─ *.swift
-│  │  ├─ Models/                        <-- Contains the data models used in the project.
-│  │  │  ├─ *.swift
-│  │  ├─ Networking/                    <-- Contains code files that handle the communication with the Github API.
-│  │  │  ├─ *.swift
-│  │  ├─ Persistence/                   <-- Contains code files that handle data storage and retrieval.
-│  │  │  ├─ *.swift
-│  │  ├─ Protocols/                     <-- Contains project-level protocols that define the behavior or capabilities of an object.
-│  │  │  ├─ *.swift
-│  │  ├─ Resources/                     <-- Contains files that define the user interface, such as images and i18n files.
-│  │  │  ├─ *.swift
-│  │  ├─ Screens/                       <-- Contains code files that define the screens of the app. Each one includes a ViewController and a ViewModel (if necessary).
-│  │  │  ├─ FavoritesList/
-│  │  │  │  ├─ *.swift
-│  │  │  ├─ Search/
-│  │  │  │  ├─ *.swift
-│  │  │  ├─ UserInfo/
-│  │  │  │  ├─ *.swift
-│  │  │  ├─ UsersList/
-│  │  │  │  ├─ *.swift
-│  │  ├─ Utils/                         <-- Contains code files that define utility classes used throughout the app.
-│  │  │  ├─ *.swift
-│  ├─ GitHubUsers.xcodeproj/        <-- Contains all the necessary files and configurations needed to build and run the app in Xcode.
-│  │  ├─ ... 
-├─ .gitignore                           <-- File used by the version control system Git to specify files or directories that should be ignored by Git when tracking changes to a project.
-├─ README.md                            <-- What you're reading now.
-```
+<details>
+    <summary>ASCII folder structure</summary>
+    ```
+    └─ GitHubUsers
+        ├── AppDelegate.swift
+        ├── Base.lproj
+        ├── Components
+        │   ├── GFAlert
+        │   │   ├── GFAlertContainerView.swift
+        │   │   └── GFAlertViewController.swift
+        │   ├── UIButton
+        │   │   └── GFButton.swift
+        │   ├── UICollectionViewCell
+        │   │   └── GFFollowerCell.swift
+        │   ├── UIImageView
+        │   │   └── GFAvatarImageView.swift
+        │   ├── UILabel
+        │   │   ├── GFBodyLabel.swift
+        │   │   ├── GFSecondaryTitleLabel.swift
+        │   │   └── GFTitleLabel.swift
+        │   ├── UITabBarController
+        │   │   └── GFTabBarController.swift
+        │   ├── UITableViewCell
+        │   │   └── GFFavoriteCell.swift
+        │   ├── UITextField
+        │   │   └── GFTextField.swift
+        │   └── UIView
+        │       ├── GFCard
+        │       │   ├── GFBaseCardView.swift
+        │       │   ├── GFGitHubProfileButtonCardView.swift
+        │       │   └── GFItemInfoCardView.swift
+        │       ├── GFCardItem
+        │       │   ├── GFBaseItem.swift
+        │       │   ├── GFFollowersItem.swift
+        │       │   ├── GFFollowingItem.swift
+        │       │   └── GFItemInfoType.swift
+        │       ├── GFEmptyStateView.swift
+        │       └── GFUserInfoHeaderView.swift
+        ├── Extensions
+        │   ├── Bundle+Ext.swift
+        │   ├── Date+Ext.swift
+        │   ├── String+Ext.swift
+        │   ├── UICollectionViewFlowLayout+Ext.swift
+        │   ├── UIView+Ext.swift
+        │   └── UIViewController+Ext.swift
+        ├── Info.plist
+        ├── Models
+        │   ├── User.swift
+        │   └── UserInfo.swift
+        ├── Network
+        │   ├── Base
+        │   │   ├── GFNetworkError.swift
+        │   │   ├── HTTPClient.swift
+        │   │   └── HTTPMethod.swift
+        │   ├── Endpoints
+        │   │   ├── Endpoint.swift
+        │   │   └── UsersEndpoint.swift
+        │   └── Services
+        │       ├── ImageService.swift
+        │       └── UsersService.swift
+        ├── Persistence
+        │   ├── Base
+        │   │   ├── GFPersistenceError.swift
+        │   │   ├── ImageManager.swift
+        │   │   └── UserDefaultsManager.swift
+        │   └── Repositories
+        │       ├── FavoriteRepository.swift
+        │       └── Repository.swift
+        ├── Protocols
+        │   ├── HasCustomView.swift
+        │   ├── KeyboardDismissable.swift
+        │   └── Userable.swift
+        ├── Resources
+        │   ├── Images
+        │   │   ├── Assets.xcassets
+        │   │   │   ├── AccentColor.colorset
+        │   │   │   ├── AppIcon.appiconset
+        │   │   │   ├── Contents.json
+        │   │   │   ├── avatar-placeholder.imageset
+        │   │   │   ├── empty-state-logo.imageset
+        │   │   │   └── gh-logo.imageset
+        │   │   ├── GFImages.swift
+        │   │   └── SFSymbol.swift
+        │   └── Strings
+        │       ├── en.lproj
+        │       │   └── Localizable.strings
+        │       ├── es.lproj
+        │       │   └── Localizable.strings
+        │       └── fr.lproj
+        │           └── Localizable.strings
+        ├── SceneDelegate.swift
+        ├── Screens
+        │   ├── FavoriteList
+        │   │   ├── FavoriteListDataSource.swift
+        │   │   ├── FavoriteListDelegate.swift
+        │   │   ├── FavoriteListView.swift
+        │   │   └── FavoriteListViewController.swift
+        │   ├── Search
+        │   │   ├── SearchDelegate.swift
+        │   │   ├── SearchView.swift
+        │   │   └── SearchViewController.swift
+        │   ├── UserInfo
+        │   │   ├── UserInfoDelegate.swift
+        │   │   ├── UserInfoView.swift
+        │   │   └── UserInfoViewController.swift
+        │   └── UserList
+        │       ├── UserListDataSource.swift
+        │       ├── UserListDelegate.swift
+        │       ├── UserListView.swift
+        │       └── UserListViewController.swift
+        └── Utils
+            └── Cache.swift
+    ```
+</details>
 
 ### Screens
 
@@ -262,6 +317,7 @@ Here is a demonstration of how to do it:
 
 ## Roadmap
 
+- [ ] Refactor `UserListViewController`.
 - [ ] Open **Repositories** and **Gists** on `UserInfo` screen when tapping on them.
 - [ ] Currently, the user can only filter by the users loaded in the app, which might not be the total amount of users to filter by. It would be nice if the app user could filter for all the followers/following users instead of filtering only by the ones that are loaded in the app's list. 
 - [ ] Add tests
