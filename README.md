@@ -15,7 +15,7 @@
     <img src="Docs/Images/icon.png" alt="Logo" width="156" height="156">
     <h2 align="center">GitHub Users</h2>
     <p align="center">Modified "GitHub Followers" take home project made by Sean Allen for his programmatic UIKit course that includes more features than the original.</p>
-    <p><
+    <p>
         <a href="https://github.com/HenestrosaConH/github-users/stargazers">
           <img alt="Stars" src="https://img.shields.io/github/stars/HenestrosaConH/github-users" />
         </a>
@@ -268,15 +268,15 @@ in your device in order to load the users. Otherwise, a dialog will be prompted 
 The `UserInfo` screen shows how many repositories, gists, followers and followings the user has.
 Moreover, you can see their location, biography and joined date. You can even open their GitHub profile by tapping on the self-titled button on the screen.
 
-To access it you can do it via these two methods in the `UsersList` screen:
+To access it you can do it via these two methods on the `UsersList` screen:
   - Just tap on any user cell. That will present a new screen showing the user information with
-  - Tap on the user icon in the top right corner of the screen. That will display the user info of the searched user.
+  - Tap on the user icon in the upper right corner of the screen. That will display the user info of the searched user.
 
 ### Add/Remove a User From Favorites
 
 There are two ways to do this:
-- Tap on the star (☆) icon in the `UserInfo` screen.
-- Tap on the star (☆) icon in the `UsersList` screen.
+- Tap on the star (☆) icon on the `UserInfo` screen.
+- Tap on the star (☆) icon on the `UsersList` screen.
 
 Moreover, if you want to remove a user from favorites, there is an additional option. You can swipe a user cell to show and tap on the **Delete** button.
 
