@@ -12,13 +12,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="Docs/Images/icon.png" alt="Logo" width="156" height="156" style="border-radius:31px">
+    <img src="Docs/Images/icon.png" alt="Logo" width="156" height="156">
     <h2 align="center">GitHub Users</h2>
-    <p align="center">
-        Modified "GitHub Followers" take-home project made by Sean Allen for his programmatic UIKit course that includes more features than the original.
-        <br />
-        <br />
-        <br />
+    <p align="center">Modified "GitHub Followers" take home project made by Sean Allen for his programmatic UIKit course that includes more features than the original.</p>
+    <p><
         <a href="https://github.com/HenestrosaConH/github-users/stargazers">
           <img alt="Stars" src="https://img.shields.io/github/stars/HenestrosaConH/github-users" />
         </a>
@@ -31,8 +28,8 @@
         <a href="https://github.com/HenestrosaConH/github-users/pulls">
           <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/HenestrosaConH/github-users" />
         </a>
-        <br />
-        <br />
+    </p>
+    <p>
         <a href="https://github.com/HenestrosaConH/github-users/issues/new/choose">Report Bug</a> · <a href="https://github.com/HenestrosaConH/github-users/issues/new/choose">Request Feature</a> · <a href="https://github.com/HenestrosaConH/github-users/discussions">Ask Question</a>
     </p>
 </div>
@@ -106,117 +103,118 @@ There might be some more subtle differences between the base project and my proj
 
 <details>
     <summary>ASCII folder structure</summary>
-    ```
-    └─ GitHubUsers
-        ├── AppDelegate.swift
-        ├── Base.lproj
-        ├── Components
-        │   ├── GFAlert
-        │   │   ├── GFAlertContainerView.swift
-        │   │   └── GFAlertViewController.swift
-        │   ├── UIButton
-        │   │   └── GFButton.swift
-        │   ├── UICollectionViewCell
-        │   │   └── GFFollowerCell.swift
-        │   ├── UIImageView
-        │   │   └── GFAvatarImageView.swift
-        │   ├── UILabel
-        │   │   ├── GFBodyLabel.swift
-        │   │   ├── GFSecondaryTitleLabel.swift
-        │   │   └── GFTitleLabel.swift
-        │   ├── UITabBarController
-        │   │   └── GFTabBarController.swift
-        │   ├── UITableViewCell
-        │   │   └── GFFavoriteCell.swift
-        │   ├── UITextField
-        │   │   └── GFTextField.swift
-        │   └── UIView
-        │       ├── GFCard
-        │       │   ├── GFBaseCardView.swift
-        │       │   ├── GFGitHubProfileButtonCardView.swift
-        │       │   └── GFItemInfoCardView.swift
-        │       ├── GFCardItem
-        │       │   ├── GFBaseItem.swift
-        │       │   ├── GFFollowersItem.swift
-        │       │   ├── GFFollowingItem.swift
-        │       │   └── GFItemInfoType.swift
-        │       ├── GFEmptyStateView.swift
-        │       └── GFUserInfoHeaderView.swift
-        ├── Extensions
-        │   ├── Bundle+Ext.swift
-        │   ├── Date+Ext.swift
-        │   ├── String+Ext.swift
-        │   ├── UICollectionViewFlowLayout+Ext.swift
-        │   ├── UIView+Ext.swift
-        │   └── UIViewController+Ext.swift
-        ├── Info.plist
-        ├── Models
-        │   ├── User.swift
-        │   └── UserInfo.swift
-        ├── Network
-        │   ├── Base
-        │   │   ├── GFNetworkError.swift
-        │   │   ├── HTTPClient.swift
-        │   │   └── HTTPMethod.swift
-        │   ├── Endpoints
-        │   │   ├── Endpoint.swift
-        │   │   └── UsersEndpoint.swift
-        │   └── Services
-        │       ├── ImageService.swift
-        │       └── UsersService.swift
-        ├── Persistence
-        │   ├── Base
-        │   │   ├── GFPersistenceError.swift
-        │   │   ├── ImageManager.swift
-        │   │   └── UserDefaultsManager.swift
-        │   └── Repositories
-        │       ├── FavoriteRepository.swift
-        │       └── Repository.swift
-        ├── Protocols
-        │   ├── HasCustomView.swift
-        │   ├── KeyboardDismissable.swift
-        │   └── Userable.swift
-        ├── Resources
-        │   ├── Images
-        │   │   ├── Assets.xcassets
-        │   │   │   ├── AccentColor.colorset
-        │   │   │   ├── AppIcon.appiconset
-        │   │   │   ├── Contents.json
-        │   │   │   ├── avatar-placeholder.imageset
-        │   │   │   ├── empty-state-logo.imageset
-        │   │   │   └── gh-logo.imageset
-        │   │   ├── GFImages.swift
-        │   │   └── SFSymbol.swift
-        │   └── Strings
-        │       ├── en.lproj
-        │       │   └── Localizable.strings
-        │       ├── es.lproj
-        │       │   └── Localizable.strings
-        │       └── fr.lproj
-        │           └── Localizable.strings
-        ├── SceneDelegate.swift
-        ├── Screens
-        │   ├── FavoriteList
-        │   │   ├── FavoriteListDataSource.swift
-        │   │   ├── FavoriteListDelegate.swift
-        │   │   ├── FavoriteListView.swift
-        │   │   └── FavoriteListViewController.swift
-        │   ├── Search
-        │   │   ├── SearchDelegate.swift
-        │   │   ├── SearchView.swift
-        │   │   └── SearchViewController.swift
-        │   ├── UserInfo
-        │   │   ├── UserInfoDelegate.swift
-        │   │   ├── UserInfoView.swift
-        │   │   └── UserInfoViewController.swift
-        │   └── UserList
-        │       ├── UserListDataSource.swift
-        │       ├── UserListDelegate.swift
-        │       ├── UserListView.swift
-        │       └── UserListViewController.swift
-        └── Utils
-            └── Cache.swift
-    ```
+    
+```
+└─ GitHubUsers
+    ├── AppDelegate.swift
+    ├── Base.lproj
+    ├── Components
+    │   ├── GFAlert
+    │   │   ├── GFAlertContainerView.swift
+    │   │   └── GFAlertViewController.swift
+    │   ├── UIButton
+    │   │   └── GFButton.swift
+    │   ├── UICollectionViewCell
+    │   │   └── GFFollowerCell.swift
+    │   ├── UIImageView
+    │   │   └── GFAvatarImageView.swift
+    │   ├── UILabel
+    │   │   ├── GFBodyLabel.swift
+    │   │   ├── GFSecondaryTitleLabel.swift
+    │   │   └── GFTitleLabel.swift
+    │   ├── UITabBarController
+    │   │   └── GFTabBarController.swift
+    │   ├── UITableViewCell
+    │   │   └── GFFavoriteCell.swift
+    │   ├── UITextField
+    │   │   └── GFTextField.swift
+    │   └── UIView
+    │       ├── GFCard
+    │       │   ├── GFBaseCardView.swift
+    │       │   ├── GFGitHubProfileButtonCardView.swift
+    │       │   └── GFItemInfoCardView.swift
+    │       ├── GFCardItem
+    │       │   ├── GFBaseItem.swift
+    │       │   ├── GFFollowersItem.swift
+    │       │   ├── GFFollowingItem.swift
+    │       │   └── GFItemInfoType.swift
+    │       ├── GFEmptyStateView.swift
+    │       └── GFUserInfoHeaderView.swift
+    ├── Extensions
+    │   ├── Bundle+Ext.swift
+    │   ├── Date+Ext.swift
+    │   ├── String+Ext.swift
+    │   ├── UICollectionViewFlowLayout+Ext.swift
+    │   ├── UIView+Ext.swift
+    │   └── UIViewController+Ext.swift
+    ├── Info.plist
+    ├── Models
+    │   ├── User.swift
+    │   └── UserInfo.swift
+    ├── Network
+    │   ├── Base
+    │   │   ├── GFNetworkError.swift
+    │   │   ├── HTTPClient.swift
+    │   │   └── HTTPMethod.swift
+    │   ├── Endpoints
+    │   │   ├── Endpoint.swift
+    │   │   └── UsersEndpoint.swift
+    │   └── Services
+    │       ├── ImageService.swift
+    │       └── UsersService.swift
+    ├── Persistence
+    │   ├── Base
+    │   │   ├── GFPersistenceError.swift
+    │   │   ├── ImageManager.swift
+    │   │   └── UserDefaultsManager.swift
+    │   └── Repositories
+    │       ├── FavoriteRepository.swift
+    │       └── Repository.swift
+    ├── Protocols
+    │   ├── HasCustomView.swift
+    │   ├── KeyboardDismissable.swift
+    │   └── Userable.swift
+    ├── Resources
+    │   ├── Images
+    │   │   ├── Assets.xcassets
+    │   │   │   ├── AccentColor.colorset
+    │   │   │   ├── AppIcon.appiconset
+    │   │   │   ├── Contents.json
+    │   │   │   ├── avatar-placeholder.imageset
+    │   │   │   ├── empty-state-logo.imageset
+    │   │   │   └── gh-logo.imageset
+    │   │   ├── GFImages.swift
+    │   │   └── SFSymbol.swift
+    │   └── Strings
+    │       ├── en.lproj
+    │       │   └── Localizable.strings
+    │       ├── es.lproj
+    │       │   └── Localizable.strings
+    │       └── fr.lproj
+    │           └── Localizable.strings
+    ├── SceneDelegate.swift
+    ├── Screens
+    │   ├── FavoriteList
+    │   │   ├── FavoriteListDataSource.swift
+    │   │   ├── FavoriteListDelegate.swift
+    │   │   ├── FavoriteListView.swift
+    │   │   └── FavoriteListViewController.swift
+    │   ├── Search
+    │   │   ├── SearchDelegate.swift
+    │   │   ├── SearchView.swift
+    │   │   └── SearchViewController.swift
+    │   ├── UserInfo
+    │   │   ├── UserInfoDelegate.swift
+    │   │   ├── UserInfoView.swift
+    │   │   └── UserInfoViewController.swift
+    │   └── UserList
+    │       ├── UserListDataSource.swift
+    │       ├── UserListDelegate.swift
+    │       ├── UserListView.swift
+    │       └── UserListViewController.swift
+    └── Utils
+        └── Cache.swift
+```
 </details>
 
 ### Screens
